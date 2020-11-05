@@ -4,8 +4,16 @@
   "description": "platform where a user can collect there music information, like vinyl collection and unreleased tracks that they want to follow",
   "main": "app.js",
   "scripts": {
+    "prestart": "npm run build",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "predev": "npm run build",
+    "dev": "nodemon app.js",
+    "prebuild": "rimraf './static'",
+    "build": "npm run build:css && npm run build:js",
+    "build:js": "node ./scripts/build-js.js",
+    "build:css": "node ./scripts/build-css.js",
+    "watch:css": "chokidar './src/css/*.css' -c 'npm run build:css'",
+    "watch:js": "chokidar './src/js/*.js' -c 'npm run build:js'"
   },
   "repository": {
     "type": "git",
@@ -28,9 +36,14 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
     "nodemon": "^2.0.6"
   }
 }
