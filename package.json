@@ -7,7 +7,7 @@
     "prestart": "npm run build",
     "start": "node app.js",
     "predev": "npm run build",
-    "dev": "nodemon app.js",
+    "dev": "env-cmd -f ./.env nodemon app.js",
     "prebuild": "rimraf './static'",
     "build": "npm run build:css && npm run build:js",
     "build:js": "node ./scripts/build-js.js",
@@ -34,13 +34,19 @@
   },
   "homepage": "https://github.com/peppequint/musicbase#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "rimraf": "^3.0.2"
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.12",
+    "rimraf": "^3.0.2",
+    "validator": "^13.1.17"
   },
   "devDependencies": {
     "chokidar-cli": "^2.1.0",
+    "env-cmd": "^10.1.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
