@@ -1,0 +1,19 @@
+// declarative
+$black: #292a31;
+$white: #f6f6f6;
+
+$yellow: #ffb700;
+$red: #f9544f;
+$blue: #4871ff;
+
+// semantic
+$color-primary: $white;
+$color-secondary: $black;
+
+$color-text: $white;
+$color-button: $blue;
+
+body {
+  background-color: $color-secondary;
+  color: $color-primary;
+}
