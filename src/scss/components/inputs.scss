@@ -52,3 +52,10 @@
   left: 0px;
   @include transition-sm;
 }
+
+.input-label--icon {
+  position: absolute;
+  bottom: $space-sm;
+  right: 0px;
+  @include transition-sm;
+}
