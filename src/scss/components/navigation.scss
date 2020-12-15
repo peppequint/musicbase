@@ -1,0 +1,27 @@
+.nav-horizontal {
+  margin: $space-md 0;
+}
+
+.nav-horizontal--list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.nav-horizontal--item {
+  flex: 0 0 auto;
+  padding: $space-xs $space-md;
+  color: $color-primary-shadow;
+  font-size: $text-sm;
+}
+
+.nav-horizontal--item-active {
+  border-radius: $text-xl;
+  background-color: $blue;
+  color: $color-primary;
+  font-weight: 600;
+}
