@@ -19,6 +19,7 @@ body {
   font-size: $text-base-size;
   font-family: $font-primary;
   line-height: $body-line-height;
+  letter-spacing: 1px;
 }
 
 h1,
@@ -47,11 +48,13 @@ h2,
 h3,
 .text--lg {
   font-size: $text-lg;
+  font-weight: 600;
 }
 
 h4,
 .text--md {
   font-size: $text-md;
+  font-weight: 600;
 }
 
 .text--sm,

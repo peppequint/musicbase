@@ -22,6 +22,7 @@ p {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button,
@@ -38,6 +39,19 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 ul {
