@@ -1,16 +1,18 @@
 .header {
   height: 15vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-
   padding: 0 $space-md;
+  align-items: center;
+  justify-content: space-between;
+  @include flex-row;
 }
 
 .header-subtitle {
   font-family: $font-secondary;
   font-weight: 500;
   color: $color-primary-shadow;
+}
+
+.header-icon:last-of-type {
+  margin-left: $space-md;
 }
