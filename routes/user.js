@@ -5,14 +5,14 @@ const auth = require("./../middleware/auth");
 
 const router = express.Router();
 
-router.post("/signup", async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
     const user = new User(req.body);
     await user.save();
 
     const token = await user.generateAuthToken();
 
-    res.status(201).send({ user, token });
+    res.status(201).redirect('/');
   } catch (err) {
     res.status(400).send(err);
   }
