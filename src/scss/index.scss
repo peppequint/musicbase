@@ -1,15 +1,21 @@
 // base
 @import "./base/colors.scss";
 @import "./base/settings.scss";
+@import "./base/spacing.scss";
 @import "./base/typography.scss";
-
-// components
-@import "./components/buttons.scss";
-@import "./components/footer.scss";
-@import "./components/header.scss";
 
 // utils
 @import "./utils/animations.scss";
 @import "./utils/easings.scss";
 @import "./utils/grid.scss";
+@import "./utils/mixins.scss";
+
+// components
+@import "./components/buttons.scss";
+@import "./components/footer.scss";
+@import "./components/header.scss";
+@import "./components/inputs.scss";
+
+// modals
+@import "./modal/login.scss";
 
