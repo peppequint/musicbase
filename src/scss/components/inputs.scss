@@ -14,6 +14,7 @@
   padding: $space-sm 0;
   &:focus + .input-label .input-label--content,
   &:valid + .input-label .input-label--content {
+  // &:invalid + .input-label .input-label--content {
     font-size: $text-sm;
     color: $color-primary-shadow;
     transform: translateY(-180%);
@@ -22,6 +23,9 @@
   &:valid + .input-label::after {
     transform: translateX(0%);
   }
+  // &:invalid + .input-label::before {
+  //   transform: translateX(0%);
+  // }
 }
 
 .input-label {
@@ -44,6 +48,17 @@
     transform: translateX(-100%);
     @include transition-sm;
   }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0px;
+  //   bottom: -1px;
+  //   width: 100%;
+  //   height: 100%;
+  //   border-bottom: 3px solid $red;
+  //   transform: translateX(-100%);
+  //   @include transition-sm;
+  // }
 }
 
 .input-label--content {
