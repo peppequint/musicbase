@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('./../partials/head') %>
-</head>
-<body>
-  
-</body>
+  <head>
+    <%- include('./../partials/head', { data: data } ) %>
+  </head>
+  <body>
+    <header class="header header-register">
+      <h4 class="header-subtitle"><%- data %></h4>
+      <div class="header-links">
+        <a href="" class="header-icon"><i class="icon-md ms-Icon ms-Icon--Ringer" aria-hidden="true"></i></a>
+        <a href="" class="header-icon"><i class="icon-md ms-Icon ms-Icon--ViewAll" aria-hidden="true"></i></a>
+      </div>
+    </header>
+    <main class="container m-dashboard">
+      <section class="user">
+        <h3 class="user-subtitle">Hello,</h3>
+        <h2 class="user-title"><%- user.name %> &#128075;</h2>
+        <p class="user-info">You have # unreleased tracks in your list!</p>
+      </section>
+      <nav class="nav-horizontal">
+        <ul class="nav-horizontal--list">
+          <li class="nav-horizontal--item nav-horizontal--item-active">Overview</li>
+          <li class="nav-horizontal--item">Unreleased</li>
+          <li class="nav-horizontal--item">Media</li>
+          <li class="nav-horizontal--item">Links</li>
+        </ul>
+      </nav>
+      <section class="unreleased">
+        <article class="search-bar">
+          <div class="input-group">
+            <input type="text" class="input input-text" id="search" name="name" autocomplete="off" required />
+            <label for="searc" class="input-label input-label--search">
+              <span class="input-label--content">Search</span>
+              <i class="icon-sm input-label--icon ms-Icon ms-Icon--Search" aria-hidden="true"></i>
+            </label>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>

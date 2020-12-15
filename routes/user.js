@@ -12,7 +12,7 @@ router.post("/register", async (req, res) => {
 
     const token = await user.generateAuthToken();
 
-    res.status(201).redirect('/');
+    res.status(201).redirect("/");
   } catch (err) {
     res.status(400).send(err);
   }
@@ -27,7 +27,15 @@ router.post("/login", async (req, res) => {
     }
 
     const token = await user.generateAuthToken();
-    res.send({ user, token });
+
+    req.session.user = {
+      name: user.name,
+      email: user.email,
+      id: user._id,
+      token: token,
+    };
+
+    res.status(201).redirect("/");
   } catch (err) {
     res.status(400).send(err);
   }
