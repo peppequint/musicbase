@@ -1,0 +1,21 @@
+.m-login {
+  height: 85vh;
+  width: 100%;
+  padding: $space-xl $space-md;
+  justify-content: flex-end;
+  @include flex-column;
+}
+
+.form-login {
+  @include flex-column;
+}
+
+.login-links {
+  margin-top: $space-lg;
+  @include flex-column;
+}
+
+.link-forgotten {
+  text-align: center;
+  color: $color-primary-shadow;
+}

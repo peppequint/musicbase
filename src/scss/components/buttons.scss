@@ -1,0 +1,25 @@
+.btn {
+  width: 100%;
+  padding: $space-sm $space-md;
+  color: $color-primary;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  border: none;
+  background-color: $blue;
+}
+
+.btn-secondary {
+  border: 2px solid $color-primary;
+  background: none;
+}
+
+.btn-submit {
+  margin-top: $space-md;
+}
+
+.btn-register {
+  margin-bottom: $space-lg;
+  font-weight: 600;
+}
