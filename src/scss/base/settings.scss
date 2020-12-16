@@ -44,7 +44,8 @@ button,
   }
 }
 
-input {
+input,
+select {
   margin: 0;
   padding: 0;
   background: none;
@@ -52,6 +53,12 @@ input {
   &:focus {
     outline: none;
   }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 ul {
