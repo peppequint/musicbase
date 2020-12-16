@@ -1,0 +1,11 @@
+.m-add {
+  height: 85vh;
+  width: 100%;
+  padding: $space-xl $space-md;
+  justify-content: flex-start;
+  @include flex-column;
+}
+
+.source-option--hidden {
+  display: none;
+}

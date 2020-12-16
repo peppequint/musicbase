@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./../partials/head', { data: data } ) %>
+  </head>
+  <body>
+    <header class="header header-register">
+      <h4 class="header-subtitle"><%- data %></h4>
+      <div class="header-links">
+        <a href="" class="header-icon"><i class="icon-md ms-Icon ms-Icon--Ringer" aria-hidden="true"></i></a>
+        <a href="" class="header-icon"><i class="icon-md ms-Icon ms-Icon--ViewAll" aria-hidden="true"></i></a>
+      </div>
+    </header>
+    <main class="container m-add">
+      <form class="form form-login" action="/add" method="post">
+        <div class="input-group">
+          <input type="text" class="input input-text" id="title" name="title" autocomplete="off" required />
+          <label for="title" class="input-label input-label--title">
+            <span class="input-label--content">Title</span>
+            <i class="icon-sm input-label--icon ms-Icon ms-Icon--MusicInCollection" aria-hidden="true"></i>
+          </label>
+        </div>
+        <div class="input-group">
+          <input type="text" class="input input-text" id="artist" name="artist" autocomplete="off" required />
+          <label for="artist" class="input-label input-label--artist">
+            <span class="input-label--content">Artist</span>
+            <i class="icon-sm input-label--icon ms-Icon ms-Icon--Contact" aria-hidden="true"></i>
+          </label>
+        </div>
+        <div class="input-group">
+          <select type="text" class="input input-select" id="source" name="source" required>
+            <option value="" selected disabled hidden></option>
+            <option value="soundcloud">SoundCloud</option>
+            <option value="facebook">Facebook</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="source" class="input-label input-label--source">
+            <span class="input-label--content">Source</span>
+            <i class="icon-sm input-label--icon ms-Icon ms-Icon--Media" aria-hidden="true"></i>
+          </label>
+        </div>
+        <div class="input-group source-option--sc source-option--hidden">
+          <input type="text" class="input input-text" id="url-sc" name="url-sc" autocomplete="off" required />
+          <label for="url-sc" class="input-label input-label--sc">
+            <span class="input-label--content">URL</span>
+            <i class="icon-sm input-label--icon ms-Icon ms-Icon--Link" aria-hidden="true"></i>
+          </label>
+        </div>
+        <div class="input-group source-option--sc source-option--hidden">
+          <input type="text" class="input input-text" id="timestamp-sc" name="timestamp-sc" autocomplete="off" required />
+          <label for="timestamp-sc" class="input-label input-label--sc">
+            <span class="input-label--content">Timestamp</span>
+            <i class="icon-sm input-label--icon ms-Icon ms-Icon--SpeedHigh" aria-hidden="true"></i>
+          </label>
+        </div>
+        <div class="input-group source-option--fb source-option--hidden">
+          <input type="text" class="input input-text" id="url-fb" name="url-fb" autocomplete="off" required />
+          <label for="url-fb" class="input-label input-label--fb">
+            <span class="input-label--content">URL</span>
+            <i class="icon-sm input-label--icon ms-Icon ms-Icon--Link" aria-hidden="true"></i>
+          </label>
+        </div>
+        <div class="input-group source-option--other source-option--hidden">
+          <input type="text" class="input input-text" id="url-other" name="url-other" autocomplete="off" required />
+          <label for="url-other" class="input-label input-label--other">
+            <span class="input-label--content">URL</span>
+            <i class="icon-sm input-label--icon ms-Icon ms-Icon--Link" aria-hidden="true"></i>
+          </label>
+        </div>
+        <button class="btn btn-primary btn-submit">Save track</button>
+      </form>
+    </main>
+    <%- include('./../partials/scripts') %>
+  </body>
+</html>
