@@ -1,17 +1,19 @@
 .btn {
-  width: 100%;
-  padding: $space-sm $space-md;
-  border-radius: $text-xl;
+  border-radius: $space-lg;
   color: $color-primary;
   letter-spacing: 2px;
 }
 
 .btn-primary {
+  width: 100%;
+  padding: $space-sm $space-md;
   border: none;
   background-color: $blue;
 }
 
 .btn-secondary {
+  width: 100%;
+  padding: $space-sm $space-md;
   border: 2px solid $color-primary;
   background: none;
 }
