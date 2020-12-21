@@ -5,7 +5,9 @@
   overflow: hidden;
 }
 
-.input {
+.input-text,
+.input-textarea,
+.input-select {
   width: 100%;
   border-bottom: 2px solid $white;
   color: $color-primary;
@@ -14,10 +16,9 @@
   padding: $space-sm 0;
   &:focus + .input-label .input-label--content,
   &:valid + .input-label .input-label--content {
-  // &:invalid + .input-label .input-label--content {
+    // &:invalid + .input-label .input-label--content {
     font-size: $text-sm;
     color: $color-primary-shadow;
-    transform: translateY(-180%);
   }
   &:focus + .input-label::after,
   &:valid + .input-label::after {
@@ -26,6 +27,16 @@
   // &:invalid + .input-label::before {
   //   transform: translateX(0%);
   // }
+}
+
+.input:focus + .input-label .input-label--content,
+.input:valid + .input-label .input-label--content {
+  transform: translateY(-180%);
+}
+
+.textarea:focus + .input-label .input-label--content,
+.textarea:valid + .input-label .input-label--content {
+  transform: translateY(-450%);
 }
 
 .input-label {
@@ -41,10 +52,10 @@
     content: "";
     position: absolute;
     left: 0px;
-    bottom: -1px;
+    bottom: 0px;
     width: 100%;
     height: 100%;
-    border-bottom: 3px solid $blue;
+    border-bottom: 2px solid $blue;
     transform: translateX(-100%);
     @include transition-sm;
   }
@@ -61,11 +72,20 @@
   // }
 }
 
+.input-label--note::after {
+  bottom: 5px;
+}
+
 .input-label--content {
   position: absolute;
   bottom: $space-sm;
   left: 0px;
   @include transition-sm;
+}
+
+.input-label--note .input-label--content,
+.input-label--note .input-label--icon {
+  bottom: $space-md;
 }
 
 .input-label--icon {
