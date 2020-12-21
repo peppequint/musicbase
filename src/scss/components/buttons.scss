@@ -1,6 +1,8 @@
 .btn {
-  border-radius: $space-lg;
+  border-radius: $space-xs;
   color: $color-primary;
+  font-size: $text-sm;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 

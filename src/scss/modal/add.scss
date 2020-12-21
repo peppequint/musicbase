@@ -1,9 +1,13 @@
 .m-add {
   height: 85vh;
   width: 100%;
-  padding: $space-xl $space-md;
+  padding: $space-md $space-md;
   justify-content: flex-start;
   @include flex-column;
+}
+
+.form-add {
+  padding-bottom: $space-xl;
 }
 
 .source-option--hidden {
