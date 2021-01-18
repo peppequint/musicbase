@@ -19,7 +19,7 @@ selectSource.addEventListener("change", (e) => {
     otherValues.forEach((elem) => {
       elem.style.display = "none";
     });
-  } else if ((e.target.value == "facebook")) {
+  } else if (e.target.value == "facebook") {
     soundcloudValues.forEach((elem) => {
       elem.style.display = "none";
     });
@@ -31,7 +31,7 @@ selectSource.addEventListener("change", (e) => {
     otherValues.forEach((elem) => {
       elem.style.display = "none";
     });
-  } else if ((e.target.value == "other")) {
+  } else if (e.target.value == "other") {
     soundcloudValues.forEach((elem) => {
       elem.style.display = "none";
     });
