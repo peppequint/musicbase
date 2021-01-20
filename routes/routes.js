@@ -4,7 +4,7 @@ const session = require("express-session");
 const index = require("./index");
 const login = require("./login");
 const register = require("./register");
-const add = require("./add");
+const { router, add } = require("./add");
 
 const user = require("./user");
 
@@ -17,6 +17,7 @@ app.use(
 );
 
 app.use(user);
+app.use(router);
 
 app.get("/", index);
 app.get("/login", login);
